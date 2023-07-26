@@ -1,0 +1,26 @@
+
+How to install Jenkins on Ubuntu os
+===================================
+
+sudo apt update
+sudo apt install openjdk-8-jdk
+wget -q -O - https://pkg.jenkins.io/debian-stable/... | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+
+#update firewall rules if required
+$ sudo ufw allow 8080
+$ sudo ufw status
+
+
+
+How to install Jenkins on windows.
+==================================
+Go to https://www.jenkins.io/download/ and Generic Java Package(.war)
+Open command prompt and Specify jenkins -jar jenkins.war or jenkins -jar jenkins.war(location)
+It will show the password, copy the password.
+And type localhost:8080 hit enter and paste the password so that jenkins can install the requifred plugins.

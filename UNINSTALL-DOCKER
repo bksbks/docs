@@ -1,0 +1,59 @@
+UNINSTALL DOCKER COMPLETELY
+============================
+Step 1: dpkg -l | grep -i docker  (to check what packages has installed)
+
+Step 2: To remove docker completely
+
+sudo apt-get purge -y docker-engine docker docker.io docker-ce  
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce
+sudo umount /var/lib/docker/
+sudo rm -rf /var/lib/docker /etc/docker
+sudo rm /etc/apparmor.d/docker
+sudo groupdel docker
+sudo rm -rf /var/run/docker.sock
+sudo rm -rf /usr/bin/docker-compose
+sudo apt-get purge docker-ce docker-ce-cli containerd.io
+
+
+
+
+UNINSTALL JDK
+============
+
+sudo apt remove --autoremove openjdk-8*
+
+INSTALL JENKINS
+===============
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo ufw allow 8080
+sudo ufw status
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+
+UNINSTALL JENKINS
+-----------------
+sudo apt-get remove --purge jenkins
+sudo rm /etc/apt/sources.list.d/jenkins.list
+sudo rm /etc/apt/sources.list.d/jenkins.list.save
+sudo rm -r /var/lib/jenkins
+
+
+
+
+Environment-Variables
+=====================
+
+export JAVA_HOME=/home/barkath/distros/jdk1.8.0_301
+export M2_HOME=/home/barkath/distros/apache-maven-3.8.1
+export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+
+Github Token
+============
+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
+
