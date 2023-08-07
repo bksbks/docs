@@ -1,0 +1,85 @@
+alias
+-----
+alias  mydire="/home/barkath/directories"
+
+Create softlink
+---------------
+ln -s /home/barkath/myfile testfile
+
+Hardlink creation
+=================
+ln /home/barkath/myfile testfile
+
+
+mkdir
+----
+mkdir dir{1..10}
+touch dir{1..10}/file{1..10} 
+
+rm -r dir* --> remove all direcctories
+
+file filename --> to know file type
+file abc.txt 
+
+View content of the file
+------------------------
+cat, tac, less, head, tail, rev, more
+
+cat -n abc.txt --> to list file content numberise
+cat -b abx.txt ---> list file content numberise and exclude blank line
+cat abc.txt cde.txt fgh.txt ---> display all 3 files content
+cat abc.txt > cde.txt
+cat abc.txt cde.txt fgh.txt > sample.txt
+cat abc.txt  >> cde.txt ---> merge one file data into another
+cat abc.txt cde.txt >> fgh.txt
+echo -n "" > abc.txt ---> to clean all content
+tac abc.txt----> vertical reversal
+rev abc.txt ---> horizontal reversal
+wc abc.txt --> displays lines,words and characters 
+head -n 50 abc.txt
+head -c 10 abc.txt ----> display only first 10 characters
+tail -n 50 abc.txt
+tail -c 10 abc.txt
+
+awk
+---
+awk '{print $1}' myyfile
+awk '{print $1,$2}' myyfile
+ls -ltr | awk '{print $NF}' ---> to print last coloumn
+awk '{print NR, $0}' file --> to add number to the names inside the file.
+awk -F, '{print $7}' file.csv
+awk '{if($3>40000) print $0}' file
+awk '{if($3=="paul") {$3=80000} print $0}' file
+awk '/india/ {print $0}' file ----> print the lines which has india
+awk 'NR=="8" {print $0}' file ---> print only lines number 8 
+awk 'NR=="8","12" {print $0}' file ---> print only lines b/w 8 to 12.
+
+
+sed
+----
+sed -i 's/pol/paul/g' data.txt
+sed -i '2 s/pol/paul/g' data.txt ----> change it only in second line 
+sed -i '2! s/pol/paul/g' data.txt ---> change every where except line 2
+sed /pol/ s/India/US/g' data.txt ---> search for POl and update it's county from india to US
+sed -n '-3p' data.txt ---> to print the 3rd line
+sed -n '-p'  data.txt ---> print the last line
+sed -n '3,5p' --> print the lines b/w 3 and 5 
+sed -n '/india/p' data.txt ---> see wherever india is present
+sed -n -e '2p' -e '3p' ----. to print 2nd  and 3rd lines data.txt
+sed -n -e '/india/p' -e '/germany/p' data.txt
+sed -n -e '1~2p' to print even numbers
+sed '1d' data.txt --> delete first line
+sed '2,4d' data.txt --> delete 2,4 lines
+sed '$d' data.txt ---. delete last line
+sed '/usa/d' data.txt
+sed '/^$/d' data.txt --> delete empty lines in a file
+sed '/india/ w IndiaUsers' data.txt  --> search for india and write it to IndiaUsers file 
+sed '2 a newuser' data.txt --> append the data atter 2nd line
+sed '3 c newuser' data.txt --> change the 3rd line data.
+sed '/india/ q' data.txt --> serach for india and quit the search.
+sed '2 e date' data.txt --> add command output at line 2
+sed '/^V/p' data.txt ---> print the names starts with V
+sed '/a$/p' data.txt ----> print the names ends with a
+sed -n '/[A-D]/' data.txt --->names starts with A to D
+
+	

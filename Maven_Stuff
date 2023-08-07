@@ -1,0 +1,27 @@
+
+
+
+mvn compile --> compile the code and create the App.class files
+
+mvn test-compile ---> along with src it will complile the test cases and creates the Apptest.class file.
+
+mvn test  --> Runs the test for project.
+
+
+SonarQube Qualitygate
+---------------------
+Code Coverage
+Duplicate Lines
+Reliability Rating
+Security Rating
+Maintainability Rating
+Security Hotspot Reviwed.
+
+Bugs
+Vulnerabilities
+Hotspot Reviwed
+Code Smell
+Coverage
+Duplications
+Lines.
+
