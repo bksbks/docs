@@ -1,10 +1,15 @@
 alias
 -----
-alias  mydire="/home/barkath/directories"
+alias -p ---> to list the existing aliases
+alias  mydire="cd /home/barkath/directories"
 
 Create softlink
 ---------------
 ln -s /home/barkath/myfile testfile
+
+backup
+-------
+tar -cxvf backup1.tar.gz /distros
 
 Hardlink creation
 =================
@@ -80,6 +85,16 @@ sed '/india/ q' data.txt --> serach for india and quit the search.
 sed '2 e date' data.txt --> add command output at line 2
 sed '/^V/p' data.txt ---> print the names starts with V
 sed '/a$/p' data.txt ----> print the names ends with a
-sed -n '/[A-D]/' data.txt --->names starts with A to D
+sed -n '/[A-D]/' data.txt --->names starts with A to D	
+
+
+grep
+----
+grep -i nfs /etc/rc.conf ---> serach for nfs/NFS
+grep ^client /etc/rc.conf ---> serach the line starts with client
+grep ^[nN] /etc/rc.conf --->  serach the line starts with n or N
+grep -v ^[nN] /etc/rc.conf ---> see everything except lines starts with n or N
+
+
 
 	
