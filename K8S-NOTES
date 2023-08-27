@@ -33,7 +33,7 @@ EKS Setup
  kubectl set image deployment nginx nginx=nginx:1.18	
  kubectl create -f deployment.yml
  
-generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 
 kubectl run nginx --image=nginx --dry-run=client -o yaml
 
@@ -69,6 +69,24 @@ Or
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml
 
 (This will not use the pods labels as selectors)
+
+labels
+-------
+
+kubectl get pods --selector app=nginx
+kubectl label pod mypod env=testing
+kubectl label --overwrite pod mypod env=prod
+kubectl label pod mypod env- ---> delete the label
+kubectl label pods --all env=develop ---> add label to all pods
+kubectl get pods --show-labels --> show all labels
+
+
+Node Taints
+------------
+kubectl taint node node01 spray=mortein:NoSchedule --> add taint
+
+kubectl taint node node01 spray=mortein:NoSchedule-   --> remove taint
+kubectl label node node01 size=large	
 
 
 
