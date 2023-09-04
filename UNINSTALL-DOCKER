@@ -38,10 +38,19 @@ sudo ufw enable
 
 UNINSTALL JENKINS
 -----------------
+sudo apt autoremove jenkins
+sudo apt -y remove jenkins
 sudo apt-get remove --purge jenkins
 sudo rm /etc/apt/sources.list.d/jenkins.list
 sudo rm /etc/apt/sources.list.d/jenkins.list.save
 sudo rm -r /var/lib/jenkins
+
+ /etc/systemd/system/multi-user.target.wants/jenkins.service → /lib/systemd/system/jenkins.service.
+
+Java uninstall
+--------------
+sudo apt remove default-jdk default-jre
+sudo apt-get remove openjdk*
 
 
 
