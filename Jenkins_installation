@@ -26,6 +26,21 @@ sudo rm /etc/apt/sources.list.d/jenkins.list
 sudo rm /etc/apt/sources.list.d/jenkins.list.save
 sudo rm -r /var/lib/jenkins
 
+ERROR
+======
+Job for jenkins.service failed because a timeout was exceeded.
+See "systemctl status jenkins.service" and "journalctl -xeu jenkins.service" for details.
+
+Solution: sudo vi /lib/systemd/system/jenkins.service and add timeout under [services] like  TimeoutStartSec=200
+         
+
+UNINSTALL JDK
+============
+
+sudo apt remove --autoremove openjdk-8*
+sudo apt remove default-jdk default-jre
+sudo apt-get remove openjdk*
+
 
 How to install Jenkins on windows.
 ==================================

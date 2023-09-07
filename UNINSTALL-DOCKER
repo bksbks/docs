@@ -17,16 +17,6 @@ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 
 
 
-UNINSTALL JDK
-============
-
-sudo apt remove --autoremove openjdk-8*
-sudo apt remove default-jdk default-jre
-sudo apt-get remove openjdk*
-
-
-
-
 Environment-Variables
 =====================
 
