@@ -17,6 +17,15 @@ $ sudo ufw allow 8080
 $ sudo ufw status
 
 
+UNINSTALL JENKINS
+-----------------
+sudo apt autoremove jenkins
+sudo apt -y remove jenkins
+sudo apt-get remove --purge jenkins
+sudo rm /etc/apt/sources.list.d/jenkins.list
+sudo rm /etc/apt/sources.list.d/jenkins.list.save
+sudo rm -r /var/lib/jenkins
+
 
 How to install Jenkins on windows.
 ==================================

@@ -21,34 +21,6 @@ UNINSTALL JDK
 ============
 
 sudo apt remove --autoremove openjdk-8*
-
-INSTALL JENKINS
-===============
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt update
-sudo apt install jenkins
-sudo systemctl start jenkins
-sudo systemctl status jenkins
-sudo ufw allow 8080
-sudo ufw status
-sudo ufw allow OpenSSH
-sudo ufw enable
-
-
-UNINSTALL JENKINS
------------------
-sudo apt autoremove jenkins
-sudo apt -y remove jenkins
-sudo apt-get remove --purge jenkins
-sudo rm /etc/apt/sources.list.d/jenkins.list
-sudo rm /etc/apt/sources.list.d/jenkins.list.save
-sudo rm -r /var/lib/jenkins
-
- /etc/systemd/system/multi-user.target.wants/jenkins.service → /lib/systemd/system/jenkins.service.
-
-Java uninstall
---------------
 sudo apt remove default-jdk default-jre
 sudo apt-get remove openjdk*
 
