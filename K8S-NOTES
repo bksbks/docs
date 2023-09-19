@@ -88,6 +88,10 @@ kubectl taint node node01 spray=mortein:NoSchedule --> add taint
 kubectl taint node node01 spray=mortein:NoSchedule-   --> remove taint
 kubectl label node node01 size=large	
 
+login to container
+------------------
+“kubectl exec -it <pod_name> -c <container_name> — /bin/bash”
+
 
 
 
