@@ -98,6 +98,24 @@ login to container
 ------------------
 “kubectl exec -it <pod_name> -c <container_name> — /bin/bash”
 
+cluster info
+------------
+kubectl config view --> cluster information
+kubectl config use-context cluster1 --> switch to cluster1
+
+
+Generate certificates
+---------------------
+openssl genrsa -out ca.key 2048 (ca.key would be created)
+
+openssl req -new -key ca.key -Subj "/CN=KUBERNETES-CA" ca.csr (ca.csr would be created)
+
+openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt (ca.crt would be created)
+
+view certificate
+-----------------
+opessl x509 -in /etc/kebernetes/pki/apiserver.crt -text -noout
+
 
 
 
