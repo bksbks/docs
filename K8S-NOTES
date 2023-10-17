@@ -116,6 +116,9 @@ view certificate
 -----------------
 opessl x509 -in /etc/kebernetes/pki/apiserver.crt -text -noout
 
+view services cluster ip range
+------------------------------
+cat /etc/kubernetes/manifests/kube-apiserver.yaml   | grep cluster-ip-range
 
 
 
