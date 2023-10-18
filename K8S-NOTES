@@ -124,6 +124,9 @@ nslookup
 ---------
 kubectl exec hr -- nslookup mysql.payroll
 
+create ingree rule using imperative way
+----------------------------------------
+kubectl create ingress ingress-pay -n critical-space --rule="/pay=pay-service:8282"
 
 
 
