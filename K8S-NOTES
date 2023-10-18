@@ -120,6 +120,11 @@ view services cluster ip range
 ------------------------------
 cat /etc/kubernetes/manifests/kube-apiserver.yaml   | grep cluster-ip-range
 
+nslookup
+---------
+kubectl exec hr -- nslookup mysql.payroll
+
+
 
 
  
