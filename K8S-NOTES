@@ -128,6 +128,12 @@ create ingree rule using imperative way
 ----------------------------------------
 kubectl create ingress ingress-pay -n critical-space --rule="/pay=pay-service:8282"
 
+create Service Account
+----------------------
+kubectl create serviceaccount ingress-nginx --namespace ingress-nginx 
+
+
+
 
 
  
