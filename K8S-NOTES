@@ -133,6 +133,10 @@ create Service Account
 kubectl create serviceaccount ingress-nginx --namespace ingress-nginx 
 
 
+config file path for kubelet
+----------------------------
+cd /etc/kubernete/kubelet.conf
+
 
 
 
