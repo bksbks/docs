@@ -137,6 +137,16 @@ config file path for kubelet
 ----------------------------
 cd /etc/kubernete/kubelet.conf
 
+create pod,svc
+---------------
+kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -oyaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml
+
+kubectl expose deployment hr-web-app --type=NodePort --port=8080 --name=hr-web-app-service --dry-run=client -o yaml > hr-web-app-service.yaml
+
+replace pod file with new one
+-----------------------------
+kubectl replace -f /tmp/kubectl-edit-xxxx.yaml --force
+
 
 
 
