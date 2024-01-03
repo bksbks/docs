@@ -1,0 +1,13 @@
+
+
+set -x #debugmode helps to print command and it's content
+set -e #exit the script when there is an error
+set -o pipefail #exit the script when there is error using pipe
+
+df -h
+
+free
+
+nproc
+-------------------------------------------------
+
