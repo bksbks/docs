@@ -95,6 +95,11 @@ grep ^client /etc/rc.conf ---> serach the line starts with client
 grep ^[nN] /etc/rc.conf --->  serach the line starts with n or N
 grep -v ^[nN] /etc/rc.conf ---> see everything except lines starts with n or N
 
+Cronjob
+--------
+crontab -l (check current created cronjobs)
+crontab -e (to create new cronjob)
+
 
 
 	
