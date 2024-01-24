@@ -1,0 +1,84 @@
+Download the tar.gz file from https://www.atlassian.com/software/bamboo/download-archives
+
+Extract the bamboo.tar.gz file and move the extracted file to /opt and create bamboo-home directory
+
+Go to /opt/bamboo/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties and update the home path bamboo.home=/opt/bamboo-home (created directory)
+
+Go to /opt/bamboo/bin and starup.sh to start bamboo
+
+Create a file at vi /etc/systemd/system/bamboo.service and update below content to create a service for start and stop.
+
+bamboo.service
+--------------
+[Unit]
+
+Description = Atlassian Bamboo
+After = syslog.target network.target
+
+[Service]
+Type = forking
+User = bamboo
+ExecStart = /opt/bamboo/bin/start-bamboo.sh
+ExecStop = /opt/bamboo/bin/stop-bamboo.sh
+SuccessExitStatus = 143
+
+[Install]
+WantedBy = multi-user.target
+
+
+sudo systemctl enable bamboo.service
+sudo systemctl start bamboo.service
+=================================================================
+
+* Bamboo server doesn't compile our code or package ur code
+* Compiling, testing and packaging is done by Bamboo agents.
+
+Build Agent Types:
+------------------
+Local Build Agent:  Used for development and testing only.Is build into bamboo server. No installation is required.
+
+Remote Build Agents: Can be used for all purposes(dev,qa and prod). Reside on a server or computer other than bamboo server's.
+                     Distribute workload accross multiple servers. Enables build and deploy various technologies Java, Dotnet Python etc.
+                     They can be destroyed and recreated without affecting bamboo server.
+  
+  Static Build Agent: AlWays Running
+  Elastic Build Agent: Runs only when needed, only available in aws,build agent as ec2,build agent ec2 instance based on pre-made AMI.
+                       Ec2 initialised when build is required. Ec2 terminates when idle.
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
