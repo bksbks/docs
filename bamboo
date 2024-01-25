@@ -44,6 +44,9 @@ Remote Build Agents: Can be used for all purposes(dev,qa and prod). Reside on a 
   Static Build Agent: AlWays Running
   Elastic Build Agent: Runs only when needed, only available in aws,build agent as ec2,build agent ec2 instance based on pre-made AMI.
                        Ec2 initialised when build is required. Ec2 terminates when idle.
+                       
+                       
+                       
                                                
 
 
