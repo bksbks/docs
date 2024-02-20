@@ -1,0 +1,16 @@
+if_else
+--------
+if [ condition] ; then
+ command
+else
+ command
+fi
+
+if [ condition] ; then
+ command
+elif [ condition] ; then
+ command
+else
+ coomand 
+fi
+  
