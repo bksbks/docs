@@ -10,4 +10,9 @@ free
 
 nproc
 -------------------------------------------------
-
+$0 -- name of the shell script
+$1 -- first argument
+$2 -- second argument
+$? -- previous command exit code
+$# -- total number of arguments
+$@ -- as many arguments we are passing.

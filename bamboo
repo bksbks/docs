@@ -44,6 +44,16 @@ Remote Build Agents: Can be used for all purposes(dev,qa and prod). Reside on a 
   Static Build Agent: AlWays Running
   Elastic Build Agent: Runs only when needed, only available in aws,build agent as ec2,build agent ec2 instance based on pre-made AMI.
                        Ec2 initialised when build is required. Ec2 terminates when idle.
+                     
+Global variables:
+------------------
+1.Global variables: Defined by the user and accessible accross bamboo instance as well as all build plans.
+2.System vaiables:  Accessible accross bamboo instance and in all build plans. They get their value from system/env variables with the same name.
+3.Plan variables: Defined by the user and accessible with in the same plan. They override Global variables.
+4.Build specific variables: Evaluated by bamboo and releated to  current build.
+5.Deployment variables: Available when deploying a project.
+6.Jira variable: Available when bamboo and jira are connected                  
+                       
                        
                        
                        
