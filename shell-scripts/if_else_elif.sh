@@ -1,17 +1,18 @@
 #!/bin/bash
 
-if [ "$(whoami)" == "barkath" ];
+user=$(whoami)
+if [ "$user" = "barkath" ];
 then
  
-  echo "Installing nginx"
-  sudo apt-get install nginx
+  echo "create repo"
+  mkdir test100
 
-elif [ "$(whoami)" == "srini" ];
+elif [ "$user" = "sudo" ];
 then
 
-   echo "installing httpd"
-   sudo apt-get install httpd
+   echo "update repo"
+   sudo apt update
 else
 
-   echo "Not anstalling anything" 
+   echo "No change " 
 fi   
