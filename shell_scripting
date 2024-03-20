@@ -16,3 +16,29 @@ $2 -- second argument
 $? -- previous command exit code
 $# -- total number of arguments
 $@ -- as many arguments we are passing.
+$(pwd) -- to save output of the command
+unset name or name= -- to unset variable
+string = my name is barkath
+"${string^}" -- print firtst letter as capital
+"${string^^}" --prints all letters in capitals
+"${string,}" -- prints first letter as small
+"${string^^}" -- prints all letters in smallS
+"${#string}" -- length of the variable
+string=barakathulla
+"${string:1}" -- removes b and print rest
+"${string:3}" -- removes bar and print rest
+"${string:3:3}" -- removes rak and print rest
+"${string: -1}" -- removes a from last
+"${string#b*k}" -- keeps barak and remove rest
+"${string%k*a}" -- from ending, keeps bara and removes everything.
+"${string/bar/abc}" -- change the text to abc
+"${string//bar/abc}" -- change the text everywhere.
+"${string/bar}" -- deletes the bar
+"${string//bar}" -- deletes the bar everywhere.
+
+default variable
+---------------
+myname=""
+username={myname:-Barkath}
+echo ${username}
+
