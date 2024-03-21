@@ -1,0 +1,60 @@
+
+
+DATA_TYPES                                            
+==========
+Text    ---- string
+Numeric --- int, float, complex
+Sequence--- list, range, tuple 
+Mapping --- diet
+Set     --- set
+Boolean --- true/false
+
+
+OPERATORS
+========
+Arithmatic --- +1*/%
+
+Assignment ----- = += -= *= /= %=
+
+Comparison---- > < >= <= !=
+
+Logical ----- AND OR NOT	
+
+Identity ----- == !=
+
+Membership ---- in, not in
+
+Bitwise ---& | ! 
+
+Arguments
+==========
+def add(a,b)
+    x=a+b
+    print(x)
+ return
+ ------
+ def add(a,b)
+    x=a+b
+    return(x)
+    
+Important functions
+===================
+x=[1,2,3,4]            d={ 
+x.append(5)                 "name" : "barkath"
+                            "lang" : "english"
+                            "place" : "india"
+y=[1,3,4,5]              } 
+y.insert (1,2)          
+                        x = d["lang"]
+z=[6,7,8]               x= d.get("lang")
+y.extend(z)             y=d.keys()
+                        y=d.values()
+a=["cat", "bat"]
+a.remove("cat")
+a.pop(0)
+del a[0]
+
+set ---> .add, .remove    
+
+    
+
