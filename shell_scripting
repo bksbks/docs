@@ -22,7 +22,8 @@ string = my name is barkath
 "${string^}" -- print firtst letter as capital
 "${string^^}" --prints all letters in capitals
 "${string,}" -- prints first letter as small
-"${string^^}" -- prints all letters in smallS
+"${string^^}" or "${string,,}" -- prints all letters in smallS
+
 "${#string}" -- length of the variable
 string=barakathulla
 "${string:1}" -- removes b and print rest

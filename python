@@ -57,4 +57,14 @@ del a[0]
 set ---> .add, .remove    
 
     
-
+whlile loop         for loop
+==========          ======== 
+i=1                 x= [1,2,3,4]
+while i<=20:        for i in x:
+  print(i)             print(i)
+  i=i+1
+  
+Lambda
+======
+def sum (a,b):   or lambda--->   x= lambda a,b:a+b  
+   returns a+b                   print (x(2,3))
