@@ -5,7 +5,7 @@ DATA_TYPES
 Text    ---- string
 Numeric --- int, float, complex
 Sequence--- list, range, tuple 
-Mapping --- diet
+Mapping --- dict
 Set     --- set
 Boolean --- true/false
 
