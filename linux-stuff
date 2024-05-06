@@ -1,3 +1,13 @@
+file systems in linux
+----------------------
+Everything in linux is a file system. Like ls,mv,cd etc
+types of file system
+ext3, ext4, XFS, FAT, BTRFS etc.
+
+
+
+
+
 alias
 -----
 alias -p ---> to list the existing aliases
