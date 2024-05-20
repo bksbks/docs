@@ -1,0 +1,22 @@
+
+
+Components
+-----------
+api server
+application controller
+repo server
+redis
+dex
+server
+
+Installation
+------------
+Follow argocd docs
+
+once installed get the password to login to server
+kubectl get secrets -n argocd
+login to server
+kube config get-contexts | grep us-east-1
+argocd cluster add conexts --server 54.193.5.241:30082
+
+
