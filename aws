@@ -1,0 +1,13 @@
+NAT Instance
+-------------
+Create NAT instance ---> Select public subnet Create SG and add source as vpc cidr and https as vpc cidr.
+
+Then networking click on source/destination stop.
+Private Route table -->  add route --> select instance
+
+
+NAT Gateway
+---------
+Create NG -->select public subnet ----> connectivity type public ---> elastic IP  --> create
+
+Private Subnet  --> route -->add NAT Gateway
