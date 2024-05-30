@@ -148,6 +148,10 @@ replace pod file with new one
 kubectl replace -f /tmp/kubectl-edit-xxxx.yaml --force
 
 
-
+AUTO-SCALERS
+------------
+HPA - Horizontal Pod Autoscaler
+VPA - Vertical POd Autoscaler
+CA - Cluster Autoscaler
 
  

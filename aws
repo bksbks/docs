@@ -11,3 +11,10 @@ NAT Gateway
 Create NG -->select public subnet ----> connectivity type public ---> elastic IP  --> create
 
 Private Subnet  --> route -->add NAT Gateway
+
+
+AutoScalingGroup
+------------------
+Scheduler Action
+Predictive Policies 
+Dynamic Policies
