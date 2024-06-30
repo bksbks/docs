@@ -18,3 +18,37 @@ AutoScalingGroup
 Scheduler Action
 Predictive Policies 
 Dynamic Policies
+
+
+Create EBS and attach to ec2 instance
+=====================================
+once ebs is attached follow below steps
+fdisk -l ---> list the partitions 
+sudo file -s /dev/sda ---> check the file systesm created or not.If not available create it.	
+sudo mkfs -t xfs /dev/sda ---> to create the file system
+mkdir /myebsvol
+mount /dev/sda /myebsvol
+
+Increase EBS volume size
+==========================
+Once modify the ebs volume run resize2fs /dev/xvdf
+
+
+Increase root EBS volume
+==========================
+Once modify the ebs volume  run growpart /dev/xvda 1
+resize2fs /dev/xvda1
+
+If xfs or other filesystem file system then xfs_growfs
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,6 +40,7 @@ UNINSTALL JDK
 sudo apt remove --autoremove openjdk-8*
 sudo apt remove default-jdk default-jre
 sudo apt-get remove openjdk*
+sudo apt remove openjdk-11-jre-headless openjdk-11-jre openjdk-11-jdk-headless openjdk-11-jdk  
 
 
 How to install Jenkins on windows.
