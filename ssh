@@ -1,0 +1,71 @@
+
+known_hosts ---> file stores the finger print of the server very first time. Next time onwards it will use the it for accessing the server.
+config --> to store the  remote host details to connect instead of typing long command.
+
+config
+-------
+Host myserver
+  Hostname  172.06.73.09
+  Port 22 (optional) 
+  User root
+
+Host barkathserver
+  Hostname  172.06.44.56
+  Port 22 (optional) 
+  User root
+  
+  
+  public/private keys
+  -------------------
+  ssh-keygen --> to create a id_rsa, id_rsa.pub 
+  authorized_keys ---> first generate the keys and copy the public key and create a .ssh folder and create authorized_keys and add it.
+                       So we can access the remote server without passwd by simply using ssh keys
+                       
+  copy public file to remote
+  --------------------------
+  ssh-copy-id -i ~/.ssh/id_rsa.pub barkath@172.23.04.06 (copies the key and creates the directory path and adds the key to authorized_keys file)
+     
+  generate a key with different name
+  ---------------------------------
+  ssh-keygen -t ed12344 -C "acme" (-C is to comment is optional)
+  /home/.ssh/acme_ed12344
+  
+  
+  connect to a remote server using privatekey
+  ---------------------------------------------
+  ssh -i  ~/.ssh/acme_id12344 barkath@172.23.04.06      
+  
+  add sshkey to store in ssh-agent memory to enter passphrase once and gets conected untill terminal is open
+  ----------------------------------------------------------------------------------------------------------
+  ssh-add ~/.ssh/acme_id12344  
+  
+  configchanges to change port, passwdauth etc
+  -----------------------------------------------
+  cd /etc/ssh and vi sshd_config file    
+  
+  
+  Troubleshooting
+  ---------------
+  Check networkend and port is open or  not on server end and firewallrules
+  permissions
+  check auth log on remote server
+  journalctl -fu ssh ---> to check the ssh logs
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              

@@ -24,6 +24,7 @@ Create EBS and attach to ec2 instance
 =====================================
 once ebs is attached follow below steps
 fdisk -l ---> list the partitions 
+df -hT ---> to check the filesystem type
 sudo file -s /dev/sda ---> check the file systesm created or not.If not available create it.	
 sudo mkfs -t xfs /dev/sda ---> to create the file system
 mkdir /myebsvol

@@ -1,3 +1,7 @@
+sethostname
+------------
+sudo hostnamectl set-hostname origin
+
 file systems in linux
 ----------------------
 Everything in linux is a file system. Like ls,mv,cd etc

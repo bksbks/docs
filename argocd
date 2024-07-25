@@ -2,11 +2,11 @@
 
 Components
 -----------
-api server
-application controller
-repo server
-redis
-dex
+api server   ---> use to communicate by UI/CLI
+application controller ------> connects to k8s and get the state
+repo server   ----> connects to git and get the state
+redis  -----> cashing the information	
+dex   -----> Oauthentication/SSO capabilities for api server
 server
 
 Installation
