@@ -1,3 +1,16 @@
+GitOPs Principles
+-----------------
+1.Declarative
+2.Versioned and immutable
+3.Pulled automatically
+4.Continuously reconciled
+
+GitOps Tools
+----------
+
+ArgoCD, Flux, JenkinsX, Spinnaker
+
+
 
 
 Components
@@ -13,7 +26,8 @@ Installation
 ------------
 Follow argocd docs
 
-once installed get the password to login to server
+Once installed please change the argocd-server service type to NodePort to access the application
+Get the password to login to server
 kubectl get secrets -n argocd
 login to server
 kube config get-contexts | grep us-east-1

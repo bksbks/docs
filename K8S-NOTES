@@ -26,7 +26,7 @@ EKS Setup
  imparative commands
  -------------------
  kubectl run --image=nginx nginx
- kubectl create deployment --image=nginx nginx
+ kubectl create deployment nginx --image=nginx 
  kubectl expose deployment nginx --port 80
  kubectl edit deployment nginx
  kubectl scale deployment nginx --replicas=5
@@ -153,5 +153,32 @@ AUTO-SCALERS
 HPA - Horizontal Pod Autoscaler
 VPA - Vertical POd Autoscaler
 CA - Cluster Autoscaler
+
+ERRORS
+---------
+ImagePullBackOff --> imahe not available, mismatch in image name, private image	
+CrashLoopBackOff  --> issue with apps, keep restrating container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
