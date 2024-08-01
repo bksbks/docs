@@ -6,7 +6,7 @@ Go to /opt/bamboo/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties and up
 
 Go to /opt/bamboo/bin and starup.sh to start bamboo
 
-Create a file at vi /etc/systemd/system/bamboo.service and update below content to create a service for start and stop.
+Create a file at vi /etc/systemd/system/bamboo.service and update below content to create a service for start and stop
 
 bamboo.service
 --------------
