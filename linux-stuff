@@ -1,6 +1,6 @@
 sethostname
 ------------
-sudo hostnamectl set-hostname origin
+sudo hostnamectl set-hostname origin	
 
 file systems in linux
 ----------------------
