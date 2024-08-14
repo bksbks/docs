@@ -1,6 +1,6 @@
 #!/bin/bash
 
-num=10
+num=6
 a=0
 
 while [ $a -le $num ]

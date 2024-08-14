@@ -6,9 +6,37 @@ ls -l /etc/apt/resources.list.d/  ---->  check the list added
 sudo apt update
 sudo apt install python3.12 -y
 
-
 sudo vi  /usr/bin/gnome-terminal and change #!/usr/bin/python3 to #!/usr/bin/python3.12  ----> to avoid ubuntu dsktop issues
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 set priorities if we have multiple python versions
 ---------------------------------------------------

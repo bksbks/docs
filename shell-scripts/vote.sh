@@ -3,7 +3,8 @@
 echo What is your age?
 read age
 
-if [ $age -ge 18 ]
+
+if [ age -ge 18 ]
 then
       echo You can vote
 else
