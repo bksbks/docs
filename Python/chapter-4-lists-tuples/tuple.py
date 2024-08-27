@@ -12,8 +12,8 @@ print(no)
 
 #concatenate
 tuple1 = (1, 2, 3)
-tupel2 = (4, 5, 6)
-concatenated = tuple1+tupel2
+tuple2 = (4, 5, 6)
+concatenated = tuple1+tuple2
 print(concatenated)
 
 

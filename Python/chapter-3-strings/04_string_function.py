@@ -15,7 +15,8 @@ print(s.find("rkat"))
 
 
 c = "barkath studied bsc"
-c.replace("bsc", "mba")
+rep = c.replace("bsc", "mba")
+print(rep)
 
 
 
