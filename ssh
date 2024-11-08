@@ -18,10 +18,10 @@ Host barkathserver
   public/private keys
   -------------------
   ssh-keygen --> to create a id_rsa, id_rsa.pub 
-  authorized_keys ---> first generate the keys and copy the public key and create a .ssh folder and create authorized_keys and add it.
-                       So we can access the remote server without passwd by simply using ssh keys
+  authorized_keys ---> first generate the keys and copy the public key and create a .ssh folder and create authorized_keys file on remote server
+                       and paste the id_rsa.pub key. So we can access the remote server without passwd by simply using ssh ubunutu@172.12.1.0
                        
-  copy public file to remote
+  copy public key to remote
   --------------------------
   ssh-copy-id -i ~/.ssh/id_rsa.pub barkath@172.23.04.06 (copies the key and creates the directory path and adds the key to authorized_keys file)
      
@@ -35,7 +35,7 @@ Host barkathserver
   ---------------------------------------------
   ssh -i  ~/.ssh/acme_id12344 barkath@172.23.04.06      
   
-  add sshkey to store in ssh-agent memory to enter passphrase once and gets conected untill terminal is open
+  add sshkey to store in ssh-agent memory and enter passphrase once and gets conected untill terminal is open
   ----------------------------------------------------------------------------------------------------------
   ssh-add ~/.ssh/acme_id12344  
   
@@ -55,7 +55,13 @@ Host barkathserver
   
   
   
+  AWS SSH Abhishek
+  ---------------
+  ssh-copy-id -f "-o IdentityFile ~/Downloads/aws-key.pem" ubuntu@13.235.70.68
   
+  ssh ubuntu@172.0.1.2 
+  
+  if you face puplic key is denied use "sudo vim /etc/ssh/sshd_config.d/60-cloudimg-settings.conf"
   
   
   
