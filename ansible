@@ -1,2 +1,32 @@
 
-ansible-galaxy role init test ---> create a role.
+ansible-galaxy role init test ---> create a new role.
+
+ansible-galaxy role install barkath dummy-role
+
+ansible-galaxy import 	<github username> dummy-role --token xxxxxxx   ---> to import the ansible role from github
+
+
+ansible-galaxy coleection install amazon.aws ----> install aws collection to create resource on it.
+pip install boto3 ----> to talk with aws api 
+
+
+Generate base64 passwd file
+---------------------------
+openssl rand -base64 2048 > pass-file/ansible-vault.pass
+
+
+pip install boto3
+
+ansible-galaxy collection install amazon.aws
+
+
+DEBUG
+-------
+---
+- hosts: all
+  become: true
+  
+  tasks:
+   - name: print all the ansible gathered facts
+     ansible.builin.debug
+       var: ansible_facts
