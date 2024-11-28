@@ -1,0 +1,22 @@
+docker network create -d bridge my_bridge  ---> create a network
+
+docker run -d --net=my_bridge --name db training/postgres ---> define network while creating container.
+
+docker network connect my_bridge web   ---> conect conatiner toa network
+
+Bridge Network
+-------------
+The default network mode in Docker. It creates a private network between the host and containers, allowing containers to communicate with each other and with the host system.
+
+Host Network
+------------
+This mode allows containers to share the host system's network stack, providing direct access to the host system's network
+
+Overlay Networking
+------------------
+This mode enables communication between containers across multiple Docker host machines, allowing containers to be connected to a single network even when they are running on different hosts.
+
+
+Macvlan Networking
+------------------
+This mode allows a container to appear on the network as a physical host rather than as a container.	
