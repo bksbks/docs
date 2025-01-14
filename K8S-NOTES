@@ -28,6 +28,7 @@ EKS Setup
  kubectl run --image=nginx nginx
  kubectl create deployment nginx --image=nginx 
  kubectl expose deployment nginx --port 80
+ kubectl set image deployment/my-deployment mycontainer=myimage:1.9.1
  kubectl edit deployment nginx
  kubectl scale deployment nginx --replicas=5
  kubectl set image deployment nginx nginx=nginx:1.18	
@@ -158,6 +159,27 @@ ERRORS
 ---------
 ImagePullBackOff --> imahe not available, mismatch in image name, private image	
 CrashLoopBackOff  --> issue with apps, keep restrating container.
+
+-------------------------------------------------------------------------------------------
+CREATE A USER ADD TO A CLUSTER
+------------------------------
+openssl genrsa -out barkath.key 2048
+openssl req -new -key barkath.key -out barkath.csr -subj "/CN=barkath"
+cat myuser.csr | base64 | tr -d "\n" and add csr in yaml file.
+kubectl get csr
+kubectl certificate approve barkath
+kubectl get csr/barkath -o yaml
+kubectl get csr barkath -o jsonpath='{.status.certificate}'| base64 -d > barkath.crt
+create role and rolebindings
+kubectl config set-credentials barkath --client-key=barkath.key --client-certificate=barkath.crt --embed-certs=true
+kubectl config set-context barkath --cluster=kubernetes --user=barkath
+kubectl config use-context barkath
+
+
+kubectl config get-contexts --> to check all the contexts
+kubectl config current-context --> check current context
+kubectl api-resources --namespaced=true ---> list all ns scoped resources 
+kubectl api-resources --namespaced=false  --> list all cluster scoped resources
 
 
 

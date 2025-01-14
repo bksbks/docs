@@ -1,0 +1,19 @@
+
+
+pub cert                    HTTPS           private cert
+client                    ==========>       server 
+server pub key                              private key  
+symetric key   
+ 
+Encrypts the symetric key using pub key and send it to server and decrepts at server end using private key.
+
+
+
+
+
+SSL/TLS certificates
+---------------------
+
+client cert   : Installed on browser
+root(CA) cert : Review the csr and issues the server certificate and validate the 
+server cert   : Server cert (pub and private cert) issued by CA 
