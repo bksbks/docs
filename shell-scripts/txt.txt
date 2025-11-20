@@ -98,3 +98,6 @@
 98
 99
 100
+cat 
+dog
+tiger
